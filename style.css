@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1535;
+}
+#yazı{
+    color:rgb(167, 56, 44);
+    position: absolute;
+    top: 0;
+    left: 500px;
+    font-size: 3em;
+}
+.kalp{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: rotate(45deg);
+    box-shadow: -10px 10px 90px  red;
+    animation: kalp 0.4s linear infinite;
+}
+@keyframes kalp{
+    0%{
+         transform: rotate(45deg) scale(1.07);
+    }
+  
+    50%{
+        transform: rotate(45deg) scale(1.0);
+    }
+  
+    100%{
+        transform: rotate(45deg) scale(1.07);
+    }
+}
+.kalp::before
+{
+    content: '';
+    position: absolute;
+    top: -99px;
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: -5px -5px 90px  red;
+
+}
+.kalp:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -99px;
+    width: 100px;
+    height: 200px;
+    background-color: red;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    box-shadow: 5px 10px 150px  red;
+
+}
